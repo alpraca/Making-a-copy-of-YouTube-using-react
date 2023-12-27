@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client"; // the app was asking you to get ReactDOM from this location
 import {BrowserRouter as Router,
   useNavigate,  
   Routes,  
@@ -8,7 +8,7 @@ import {BrowserRouter as Router,
   BrowserRouter
 }   
 from 'react-router-dom';  
-import reportWebVitals from '../../jutubi/src/reportWebVitals';
+import reportWebVitals from '../src/reportWebVitals.js'; // changed the location of the import seems like the issue was it was being imported from two different places
 import './index.css';
 import Menulogo from './fotos/icons8-menu-50.png';
 import Jutublogo from './fotos/icons8-youtube-48.png';
@@ -240,6 +240,7 @@ function Main({ open }) {
 
 export default function App() {
   const [open, setOpen] = useState(false);
+  
 
   return (
     <>  <div className="wrapper">

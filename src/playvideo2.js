@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom"
 import reportWebVitals from './reportWebVitals';
-import './indexi.css';
+import './index.css'; // fixed the import
 import React, { useState} from 'react'
 import {BrowserRouter as Router,  
   Routes,  
